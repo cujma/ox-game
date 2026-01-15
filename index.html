@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="styles/board.css">
+        <link rel="stylesheet" href="styles/buttons.css">
+        <link rel="stylesheet" href="styles/overlay.css">
+        <link rel="stylesheet" href="styles/animations.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/icon.svg">
+        <title>OX GAME</title>
+    </head>
+
+    <body class="animated-background">
+        <div id="menu">
+            <div class="menu-main-box">
+                <h1 id="title">OX GAME</h1>
+                <div class="menu-buttons-container">
+                    <button type="button" class="btn btn-dark" id="mode-basic-btn" onclick="startGameBasic()">Classic PvP</button>
+                    <button type="button" class="btn btn-dark" id="mode-special-btn" onclick="startGameSpecial()">Special PvP</button>
+                    <button type="button" class="btn btn-dark" id="mode-ai-btn" onclick="startGameAI()">Classic PvE</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mode-basic" class="hidden">
+            <div class="game-container">
+                <div class="board">
+                    <div class="cell-basic" >
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-basic">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                </div>
+                <p id="status-basic">Player move: X</p>
+                <div class="board-buttons">
+                    <button type="button" class="btn btn-dark board-button" id="go-back-basic">Menu</button>
+                    <button class="btn btn-dark board-button" onclick="gameResetBasic()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mode-ai" class="hidden">
+            <div class="game-container">
+                <div class="board">
+                    <div class="cell-ai" >
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-ai">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                </div>
+                <p id="status-ai">Player move: X</p>
+                <div class="board-buttons">
+                    <button type="button" class="btn btn-dark board-button" id="go-back-ai">Menu</button>
+                    <button class="btn btn-dark board-button" onclick="gameResetAI()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mode-special" class="hidden">
+            <div class="game-container">
+                <div class="board">
+                    <div class="cell-special" >
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                    <div class="cell-special">
+                        <img src="assets/blank.png" draggable="false">
+                    </div>
+                </div>
+                <p id="status-special">Player move: X</p>
+                <div class="board-buttons">
+                    <button type="button" class="btn btn-dark board-button" id="go-back-special">Menu</button>
+                    <button class="btn btn-dark board-button" onclick="gameResetSpecial()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-end" class="hidden game-end-overlay">
+            <div class="game-end-box">
+                <h1 id="game-end-text">Victory!</h1>
+                <button class="btn btn-dark " id="play-again-btn">Play again</button>
+                <button class="btn btn-outline-dark" id="back-to-menu-btn">Back to menu</button>
+            </div>
+        </div>
+
+        <script src="scripts/mode_basic.js"></script>
+        <script src="scripts/mode_ai.js"></script>
+        <script src="scripts/mode_special.js"></script>
+        <script src="scripts/ui.js"></script>
+        <script src="scripts/animations.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>

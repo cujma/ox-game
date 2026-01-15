@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+    .board {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 10px;
+    }
+
+    #menu h1 {
+        font-size: 6vw;
+    }
+
+    #menu button {
+        width: 200px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 0.6em 1.2em;
+    }
+
+    .board-button {
+        width: 170px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    p[id^="status"] {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .board {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+        gap: 6px;
+    }
+
+    #menu button {
+        width: 160px;
+        height: 55px;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+    }
+
+    .board-button {
+        width: 150px;
+        height: 45px;
+        font-size: 0.95rem;
+    }
+}

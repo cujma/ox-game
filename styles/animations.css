@@ -1,0 +1,24 @@
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.5);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+.cell.clicked img {
+    animation: pulse 0.25s ease;
+}
+
+@keyframes blink {
+    0%,100% {opacity: 1;}
+    50% {opacity: 0.5;}
+}
+
+.cell-basic.win img, .cell-ai.win img, .cell-special.win img {
+    animation: blink 0.5s infinite;
+}
+
